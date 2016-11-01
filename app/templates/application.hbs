@@ -1,11 +1,32 @@
 <div class="jumbotron">
-  {{#link-to 'bills'}}Bills{{/link-to}}
-  {{#link-to 'index'}}<h1 class="text-center">Enlightened Citizenry</h1>{{/link-to}}
-  <p class="container">
-    <em>"An enlightened citizenry is indispensable for the proper functioning of a republic. Self-government is not possible unless the citizens are educated sufficiently to enable them to exercise oversight."</em> -Thomas Jefferson
-  </p>
+  <div class="container">
+    <button class="btn btn-default" {{action 'toggleSidebar'}}>
+      Menu
+    </button>
+    {{#link-to 'index'}}<h1 class="text-center">Enlightened Citizenry</h1>{{/link-to}}
+    <p>
+      <em>"An enlightened citizenry is indispensable for the proper functioning of a republic. Self-government is not possible unless the citizens are educated sufficiently to enable them to exercise oversight."</em> -Thomas Jefferson
+    </p>
+  </div>
+
 </div>
 <br>
 <div class="container">
   {{outlet}}
+</div>
+
+<div class="ui left demo vertical inverted sidebar labeled icon menu">
+  {{#link-to 'index'}}
+    <a class="item" {{action 'toggleSidebar'}}>
+      <i class="home icon"></i>
+      Home
+    </a>
+  {{/link-to}}
+  {{#link-to 'bills'}}
+  <a class="item" {{action 'toggleSidebar'}}>
+    <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+    <br><br>
+    Bills
+  </a>
+  {{/link-to}}
 </div>
