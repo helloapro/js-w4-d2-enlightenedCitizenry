@@ -1,3 +1,5 @@
 <h2>({{subcommittee.committee_id}} of {{subcommittee.parent_committee_id}}) {{subcommittee.name}}</h2>
-<h4>phone: {{subcommittee.phone}}</h4>
+{{#if subcommittee.phone}}
+  <h4>phone: {{subcommittee.phone}}</h4>
+{{/if}}
 <h4>chamber: {{subcommittee.chamber}}</h4>

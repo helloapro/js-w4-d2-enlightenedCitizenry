@@ -1,2 +1,5 @@
 {{#link-to 'subcommitteeresults' committee.committee_id }}<h2>({{committee.committee_id}}) {{committee.name}}</h2>{{/link-to}}
+{{#if committee.phone}}
+  <h4>phone: {{committee.phone}}</h4>
+{{/if}}
 <h4>chamber: {{committee.chamber}}</h4>

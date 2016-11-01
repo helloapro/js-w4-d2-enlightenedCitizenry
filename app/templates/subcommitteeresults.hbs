@@ -1,3 +1,7 @@
-{{#each model as |subcommittee|}}
-  {{subcommittee-list subcommittee=subcommittee}}
-{{/each}}
+{{#if model.[0]}}
+  {{#each model as |subcommittee|}}
+    {{subcommittee-list subcommittee=subcommittee}}
+  {{/each}}
+{{else}}
+  <h2>No Sub Committees</h2>
+{{/if}}
